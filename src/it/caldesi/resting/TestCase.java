@@ -12,7 +12,7 @@ public abstract class TestCase extends RESTQuestioner {
      * set to true if you want to call setUp() and cleanUp() for
      * each test void into your TestCase subclass.
      */
-    protected boolean refreshForEachvoid = false;
+    protected boolean refreshForEachFuction = false;
 
     /**
      * Initialize all you need into the testing functions.
@@ -42,7 +42,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value
      * @throws AssertionFailedException
      */
-    protected final static void assertTrue(boolean value) throws AssertionFailedException {
+    protected final static void assertTrue(boolean value) {
         if (value != true)
             throw new AssertionFailedException("Expected \"true\"");
     }
@@ -53,7 +53,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value
      * @throws AssertionFailedException
      */
-    public final static void assertFalse(boolean value) throws AssertionFailedException {
+    public final static void assertFalse(boolean value) {
         if (value != false)
             throw new AssertionFailedException("Expected \"false\"");
     }
@@ -65,7 +65,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value2
      * @throws AssertionFailedException
      */
-    public final static void assertEqual(Object value1, Object value2) throws AssertionFailedException {
+    public final static void assertEqual(Object value1, Object value2) {
         if ((value1 == null && value2 != null) || !value1.equals(value2))
             throw new AssertionFailedException("Expected \"" + value1 + "\" to be equals to \"" + value2 + "\"");
     }
@@ -77,7 +77,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value2
      * @throws AssertionFailedException
      */
-    public final static void assertNotEqual(Object value1, Object value2) throws AssertionFailedException {
+    public final static void assertNotEqual(Object value1, Object value2) {
         if ((value1 == null && value2 == null) || value1.equals(value2))
             throw new AssertionFailedException("Expected \"" + value1 + "\" not to be equals to \"" + value2 + "\"");
     }
@@ -89,7 +89,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value2
      * @throws AssertionFailedException
      */
-    public final static void assertIdentical(Object value1, Object value2) throws AssertionFailedException {
+    public final static void assertIdentical(Object value1, Object value2) {
         if (value1 != value2)
             throw new AssertionFailedException("Expected \"" + value1 + "\" to be identical to \"" + value2 + "\"");
     }
@@ -101,7 +101,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value2
      * @throws AssertionFailedException
      */
-    public final static void assertNotIdentical(Object value1, Object value2) throws AssertionFailedException {
+    public final static void assertNotIdentical(Object value1, Object value2) {
         if (value1 == value2)
             throw new AssertionFailedException("Expected \"" + value1 + "\" not to be identical to \"" + value2 + "\"");
     }
@@ -113,7 +113,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value2
      * @throws AssertionFailedException
      */
-    public final static void assertLessThan(Comparable value1, Comparable value2) throws AssertionFailedException {
+    public final static void assertLessThan(Comparable value1, Comparable value2) {
         if (value1.compareTo(value2) >= 0)
             throw new AssertionFailedException("Expected \"" + value1 + "\" to be less than \"" + value2 + "\"");
     }
@@ -125,7 +125,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value2
      * @throws AssertionFailedException
      */
-    public final static void assertLessThanOrEqual(Comparable value1, Comparable value2) throws AssertionFailedException {
+    public final static void assertLessThanOrEqual(Comparable value1, Comparable value2) {
         if (value1.compareTo(value2) > 0)
             throw new AssertionFailedException("Expected \"" + value1 + "\" to be less than or equals to \"" + value2 + "\"");
     }
@@ -137,7 +137,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value2
      * @throws AssertionFailedException
      */
-    public final static void assertGreaterThan(Comparable value1, Comparable value2) throws AssertionFailedException {
+    public final static void assertGreaterThan(Comparable value1, Comparable value2) {
         if (value1.compareTo(value2) <= 0)
             throw new AssertionFailedException("Expected \"" + value1 + "\" to be greater than \"" + value2 + "\"");
     }
@@ -149,7 +149,7 @@ public abstract class TestCase extends RESTQuestioner {
      * @param value2
      * @throws AssertionFailedException
      */
-    public final static void assertGreaterThanOrEqual(Comparable value1, Comparable value2) throws AssertionFailedException {
+    public final static void assertGreaterThanOrEqual(Comparable value1, Comparable value2) {
         if (value1.compareTo(value2) <= 0)
             throw new AssertionFailedException("Expected \"" + value1 + "\" to be greater than or equals to \"" + value2 + "\"");
     }
