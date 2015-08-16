@@ -1,11 +1,12 @@
 package it.caldesi.resting;
 
 import it.caldesi.resting.exceptions.AssertionFailedException;
+import it.caldesi.resting.net.RESTQuestioner;
 
 /**
  * @author Domenico Rosario Caldesi, <d.r.caldesi@gmail.com>
  */
-public abstract class TestCase {
+public abstract class TestCase extends RESTQuestioner {
 
     /**
      * set to true if you want to call setUp() and cleanUp() for
